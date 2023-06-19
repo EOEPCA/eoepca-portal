@@ -1,62 +1,42 @@
-# Log file
-*.log
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
 
-# C extensions
-*.so
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
 
-
-# PyBuilder
-target/
-
-# Environments
-.env
-.venv
-env/
-
-# VSCode
-.vscode
+# System files
+.DS_Store
+Thumbs.db
