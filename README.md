@@ -129,6 +129,16 @@ ng build
 ``` 
 The build artifacts will be stored in the `dist/` directory.
 
+Build the production Docker image with:
+```shell
+ng build --configuration=production
+docker build . -f Dockerfile.production -t identity-manager:production
+```
+Run with:
+```shell
+docker run --rm -dp 4200:80 --name identity-manager identity-manager:production
+```
+
 ### Running unit tests
 
 Execute unit tests via [Karma](https://karma-runner.github.io):
@@ -148,8 +158,8 @@ To use this command, you need to first add a package that implements end-to-end 
 ### Running with Docker
 
 ```shell
-docker build . -t identity-manager:latest
-docker run --rm -dp 4200:4200 --name identity-manager identity-manager:latest
+docker build . -t identity-manager:development
+docker run --rm -dp 4200:4200 --name identity-manager identity-manager:development
 ```
 
 ### Further help
