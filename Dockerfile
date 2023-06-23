@@ -8,7 +8,7 @@ RUN npm config set unsafe-perm true
 
 RUN npm install -g @angular/cli@13
 
-COPY package.json package-lock.json ./
+COPY --chown=node:node package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
