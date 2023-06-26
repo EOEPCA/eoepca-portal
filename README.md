@@ -158,8 +158,8 @@ To use this command, you need to first add a package that implements end-to-end 
 ### Running with Docker
 
 ```shell
-docker build . -t identity-manager:development
-docker run --rm -dp 4200:4200 --name identity-manager identity-manager:development
+docker build . -t identity-manager
+docker run --rm -dp 4200:4200 --name identity-manager identity-manager
 ```
 
 ### Further help
