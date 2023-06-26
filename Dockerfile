@@ -3,12 +3,9 @@ FROM --platform=$BUILDPLATFORM node:20.3.0-bullseye-slim as builder
 RUN mkdir /app
 WORKDIR /app
 
-# To Fix Permissions for Packages
-RUN npm config set unsafe-perm true
-
 RUN npm install -g @angular/cli@13
 
-COPY --chown=node:node package.json package-lock.json ./
+COPY --chown=node:node package.json package-lock.json .npmrc ./
 RUN npm ci
 
 COPY . .
