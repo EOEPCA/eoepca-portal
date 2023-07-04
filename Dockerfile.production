@@ -1,6 +1,12 @@
+FROM --platform=$BUILDPLATFORM angular/ngcontainer as builder
+RUN mkdir /app
+WORKDIR /app
+RUN npm install -g @angular/cli@13
+COPY --chown=node:node src package.json package-lock.json angular.json tsconfig.app.json tsconfig.json tsconfig.spec.json .npmrc ./
+RUN ng build --configuration=production
 FROM nginx:1.25
 EXPOSE 80
 COPY conf/default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
-COPY dist/identity-manager /usr/share/nginx/html
+COPY --from=builder dist/identity-manager /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

@@ -45,15 +45,18 @@
 
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-    - [Built With](#built-with)
+  - [Built With](#built-with)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Testing](#testing)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+  - [Running with Docker](#running-with-docker)
+  - [Further help](#further-help)
 - [Documentation](#documentation)
 - [Usage](#usage)
-    - [Running the template service](#running-the-template-service)
-    - [Upgrading Gradle Wrapper](#upgrading-gradle-wrapper)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -158,8 +161,8 @@ To use this command, you need to first add a package that implements end-to-end 
 ### Running with Docker
 
 ```shell
-docker build . -t identity-manager:development
-docker run --rm -dp 4200:4200 --name identity-manager identity-manager:development
+docker build . -t um-identity-manager
+docker run --rm -dp 4200:4200 --name um-identity-manager um-identity-manager
 ```
 
 ### Further help
