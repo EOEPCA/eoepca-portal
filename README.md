@@ -160,10 +160,19 @@ To use this command, you need to first add a package that implements end-to-end 
 
 ### Running with Docker
 
+**Develop**
 ```shell
-docker build . -t um-identity-manager
-docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork um-identity-manager
+docker build . --progress=plain -t um-identity-manager:develop
+docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork um-identity-manager:develop
 ```
+
+**Production**
+```shell
+docker build . -f Dockerfile.production --progress=plain -t um-identity-manager:production
+docker run --rm -dp 4200:80 --name um-identity-manager --network eoepcanetwork um-identity-manager:production
+```
+
+Identity manager is available at [localhost:4200](http://localhost:4200).
 
 ### Further help
 

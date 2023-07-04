@@ -1,12 +1,15 @@
-FROM --platform=$BUILDPLATFORM angular/ngcontainer as builder
+FROM --platform=$BUILDPLATFORM node:18.16.1-alpine AS builder
+USER root
 RUN mkdir /app
 WORKDIR /app
-RUN npm install -g @angular/cli@13
-COPY --chown=node:node src package.json package-lock.json angular.json tsconfig.app.json tsconfig.json tsconfig.spec.json .npmrc ./
-RUN ng build --configuration=production
+COPY --chown=node:node src src
+COPY --chown=node:node package.json package-lock.json angular.json tsconfig.app.json tsconfig.json tsconfig.spec.json .npmrc ./
+RUN ls
+RUN npm install
+RUN npm run build
 FROM nginx:1.25
 EXPOSE 80
 COPY conf/default.conf /etc/nginx/conf.d/
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=builder dist/identity-manager /usr/share/nginx/html
+COPY --from=builder app/dist/identity-manager /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
