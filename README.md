@@ -135,11 +135,11 @@ The build artifacts will be stored in the `dist/` directory.
 Build the production Docker image with:
 ```shell
 ng build --configuration=production
-docker build . -f Dockerfile.production -t identity-manager:production
+docker build . -f Dockerfile.production -t identity-manager
 ```
 Run with:
 ```shell
-docker run --rm -dp 4200:80 --name identity-manager identity-manager:production
+docker run --rm -dp 4200:80 --name identity-manager --network eoepcanetwork identity-manager
 ```
 
 ### Running unit tests
