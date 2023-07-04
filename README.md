@@ -159,7 +159,7 @@ To use this command, you need to first add a package that implements end-to-end 
 
 ```shell
 docker build . -t identity-manager
-docker run --rm -dp 4200:4200 --name identity-manager identity-manager
+docker run --rm -dp 4200:4200 --name identity-manager --network eoepcanetwork identity-manager
 ```
 
 ### Further help
