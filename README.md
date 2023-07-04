@@ -162,7 +162,7 @@ To use this command, you need to first add a package that implements end-to-end 
 
 ```shell
 docker build . -t um-identity-manager
-docker run --rm -dp 4200:4200 --name um-identity-manager um-identity-manager
+docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork um-identity-manager
 ```
 
 ### Further help
