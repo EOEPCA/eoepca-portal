@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM node:20.3.0-bullseye-slim as builder
+FROM node:20.3.0-bullseye-slim as builder
 
 RUN mkdir /app
 WORKDIR /app
