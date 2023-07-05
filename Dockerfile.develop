@@ -1,0 +1,15 @@
+FROM --platform=$BUILDPLATFORM node:18.16.1-alpine AS builder
+RUN mkdir -p /app
+WORKDIR /app
+COPY --chown=node:node src src
+COPY --chown=node:node package.json package-lock.json angular.json tsconfig.app.json tsconfig.json tsconfig.spec.json .npmrc ./
+RUN npm install
+RUN npm run build
+FROM nginxinc/nginx-unprivileged:alpine
+EXPOSE 8080
+COPY conf/default.conf /etc/nginx/conf.d/
+USER root
+RUN rm -rf /usr/share/nginx/html/*
+USER nginx
+COPY --from=builder app/dist/identity-manager /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
