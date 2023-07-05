@@ -169,7 +169,7 @@ docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork
 **Local Production**
 ```shell
 docker build . -f Dockerfile.production --progress=plain -t um-identity-manager:production
-docker run --rm -dp 4200:80 --name um-identity-manager --network eoepcanetwork um-identity-manager:production
+docker run --rm -dp 4200:8080 --name um-identity-manager --network eoepcanetwork um-identity-manager:production
 ```
 
 **Remote develop**
@@ -179,7 +179,7 @@ docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork
 
 **Remote Production**
 ```shell
-docker run --rm -dp 4200:80 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:master
+docker run --rm -dp 4200:8080 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:master
 ```
 
 Identity manager is available at [localhost:4200](http://localhost:4200).
