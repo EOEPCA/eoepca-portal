@@ -166,15 +166,15 @@ docker build . --progress=plain -t um-identity-manager:develop
 docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork um-identity-manager:develop
 ```
 
-**Remote develop**
-```shell
-docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:develop
-```
-
 **Local Production**
 ```shell
 docker build . -f Dockerfile.production --progress=plain -t um-identity-manager:production
 docker run --rm -dp 4200:80 --name um-identity-manager --network eoepcanetwork um-identity-manager:production
+```
+
+**Remote develop**
+```shell
+docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:develop
 ```
 
 **Remote Production**
