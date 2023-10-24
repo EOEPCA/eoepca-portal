@@ -1,7 +1,7 @@
 <!--
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
-*** um-identity-manager
+*** eoepca-portal
 -->
 
 <!-- PROJECT SHIELDS -->
@@ -21,23 +21,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/EOEPCA/um-identity-manager">
+  <a href="https://github.com/EOEPCA/eoepca-portal">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">um-identity-manager</h3>
+<h3 align="center">eoepca-portal</h3>
 
   <p align="center">
     Web application using AngularJS and Angular Material to visually interact with the Identity. 
     Interacts with Identity API.
     <br />
-    <a href="https://github.com/EOEPCA/um-identity-manager"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/EOEPCA/eoepca-portal"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/EOEPCA/um-identity-manager">View Demo</a>
+    <a href="https://github.com/EOEPCA/eoepca-portal">View Demo</a>
     ·
-    <a href="https://github.com/EOEPCA/um-identity-manager/issues">Report Bug</a>
+    <a href="https://github.com/EOEPCA/eoepca-portal/issues">Report Bug</a>
     ·
-    <a href="https://github.com/EOEPCA/um-identity-manager/issues">Request Feature</a>
+    <a href="https://github.com/EOEPCA/eoepca-portal/issues">Request Feature</a>
   </p>
 </p>
 
@@ -98,13 +98,13 @@ vagrant ssh
 3. Clone the repo
 
 ```sh
-git clone https://github.com/EOEPCA/um-identity-managergit
+git clone https://github.com/EOEPCA/eoepca-portalgit
 ```
 
 4. Change local directory
 
 ```sh
-cd um-identity-manager
+cd eoepca-portal
 ```
 
 5. Run development server
@@ -135,11 +135,11 @@ The build artifacts will be stored in the `dist/` directory.
 Build the production Docker image with:
 ```shell
 ng build --configuration=production
-docker build . -f Dockerfile.production -t identity-manager
+docker build . -f Dockerfile.production -t eoepca-portal
 ```
 Run with:
 ```shell
-docker run --rm -dp 4200:80 --name identity-manager --network eoepcanetwork identity-manager
+docker run --rm -dp 4200:80 --name eoepca-portal --network eoepcanetwork eoepca-portal
 ```
 
 ### Running unit tests
@@ -162,27 +162,27 @@ To use this command, you need to first add a package that implements end-to-end 
 
 **Local develop**
 ```shell
-docker build . --progress=plain -t um-identity-manager:develop
-docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork um-identity-manager:develop
+docker build . --progress=plain -t eoepca-portal:develop
+docker run --rm -dp 4200:4200 --name eoepca-portal --network eoepcanetwork eoepca-portal:develop
 ```
 
 **Local Production**
 ```shell
-docker build . -f Dockerfile.production --progress=plain -t um-identity-manager:production
-docker run --rm -dp 4200:8080 --name um-identity-manager --network eoepcanetwork um-identity-manager:production
+docker build . -f Dockerfile.production --progress=plain -t eoepca-portal:production
+docker run --rm -dp 4200:8080 --name eoepca-portal --network eoepcanetwork eoepca-portal:production
 ```
 
 **Remote develop**
 ```shell
-docker run --rm -dp 4200:4200 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:develop
+docker run --rm -dp 4200:4200 --name eoepca-portal --network eoepcanetwork ghcr.io/eoepca/eoepca-portal:develop
 ```
 
 **Remote Production**
 ```shell
-docker run --rm -dp 4200:8080 --name um-identity-manager --network eoepcanetwork ghcr.io/eoepca/um-identity-manager:master
+docker run --rm -dp 4200:8080 --name eoepca-portal --network eoepcanetwork ghcr.io/eoepca/eoepca-portal:master
 ```
 
-Identity manager is available at [localhost:4200](http://localhost:4200).
+Portal is available at [localhost:4200](http://localhost:4200).
 
 ### Further help
 
@@ -190,7 +190,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Documentation
 
-The component documentation can be found at https://eoepca.github.io/um-identity-manager/.
+The component documentation can be found at https://eoepca.github.io/eoepca-portal/.
 
 <!-- USAGE EXAMPLES -->
 
@@ -204,7 +204,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/EOEPCA/um-identity-manager/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/EOEPCA/eoepca-portal/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -228,21 +228,21 @@ Distributed under the Apache-2.0 License. See `LICENSE` for more information.
 
 [EOEPCA mailbox](eoepca.systemteam@telespazio.com)
 
-Project Link: [https://github.com/EOEPCA/um-identity-manager](https://github.com/EOEPCA/um-identity-manager)
+Project Link: [https://github.com/EOEPCA/eoepca-portal](https://github.com/EOEPCA/eoepca-portal)
 
 ## Acknowledgements
 
 - README.md is based on [this template](https://github.com/othneildrew/Best-README-Template) by [Othneil Drew](https://github.com/othneildrew).
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/EOEPCA/um-identity-managersvg?style=flat-square
-[contributors-url]: https://github.com/EOEPCA/um-identity-manager/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/EOEPCA/um-identity-managersvg?style=flat-square
-[forks-url]: https://github.com/EOEPCA/um-identity-manager/network/members
-[stars-shield]: https://img.shields.io/github/stars/EOEPCA/um-identity-managersvg?style=flat-square
-[stars-url]: https://github.com/EOEPCA/um-identity-manager/stargazers
-[issues-shield]: https://img.shields.io/github/issues/EOEPCA/um-identity-managersvg?style=flat-square
-[issues-url]: https://github.com/EOEPCA/um-identity-manager/issues
-[license-shield]: https://img.shields.io/github/license/EOEPCA/um-identity-managersvg?style=flat-square
-[license-url]: https://github.com/EOEPCA/um-identity-manager/blob/master/LICENSE
-[build-shield]: https://www.travis-ci.com/EOEPCA/um-identity-managersvg?branch=master
+[contributors-shield]: https://img.shields.io/github/contributors/EOEPCA/eoepca-portalsvg?style=flat-square
+[contributors-url]: https://github.com/EOEPCA/eoepca-portal/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/EOEPCA/eoepca-portalsvg?style=flat-square
+[forks-url]: https://github.com/EOEPCA/eoepca-portal/network/members
+[stars-shield]: https://img.shields.io/github/stars/EOEPCA/eoepca-portalsvg?style=flat-square
+[stars-url]: https://github.com/EOEPCA/eoepca-portal/stargazers
+[issues-shield]: https://img.shields.io/github/issues/EOEPCA/eoepca-portalsvg?style=flat-square
+[issues-url]: https://github.com/EOEPCA/eoepca-portal/issues
+[license-shield]: https://img.shields.io/github/license/EOEPCA/eoepca-portalsvg?style=flat-square
+[license-url]: https://github.com/EOEPCA/eoepca-portal/blob/master/LICENSE
+[build-shield]: https://www.travis-ci.com/EOEPCA/eoepca-portalsvg?branch=master

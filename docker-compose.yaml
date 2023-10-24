@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  eoepca-portal:
+    build: .
+    container_name: eoepca-portal
+    environment:
+      - CONFIGURATION=develop
+    ports:
+      - '80:80'

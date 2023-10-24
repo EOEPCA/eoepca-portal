@@ -1,22 +1,17 @@
-FROM node:20.3.0-bullseye-slim as builder
-
-RUN mkdir /app
-WORKDIR /app
-
-RUN npm install -g @angular/cli@13
-
-COPY --chown=node:node package.json package-lock.json .npmrc ./
-RUN npm ci
-
+### STAGE 1: Build ###
+FROM node:18.12.1-buster-slim as build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm i -g @angular/cli
+    
+# Install app dependencies:
+RUN npm i
+    
 COPY . .
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+ARG CONFIGURATION=develop
+RUN ng build --configuration=$CONFIGURATION
 
-FROM builder as dev-envs
-
-RUN apt-get update && apt-get install -y --no-install-recommends git
-
-RUN useradd -s /bin/bash -m vscode && groupadd docker && usermod -aG docker vscode
-# install Docker tools (cli, buildx, compose)
-COPY --from=gloursdocker/docker / /
-
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+### STAGE 2: Run ###
+FROM nginx:stable-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/src/app/dist/* /usr/share/nginx/html
