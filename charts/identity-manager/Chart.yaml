@@ -1,5 +1,0 @@
-apiVersion: v2
-name: identity-portal
-description: A helm chart for Identity portal
-version: 1.0.0
-appVersion: "develop"

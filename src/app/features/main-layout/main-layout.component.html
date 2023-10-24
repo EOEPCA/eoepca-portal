@@ -1,0 +1,18 @@
+<div class="bg-primary-black flex flex-col h-screen justify-between">
+    <header>
+        <app-navbar
+                (login)="onLogin()"
+                (logout)="onLogout()"
+                [isAuthenticated]="isLoggedIn"
+                [userProfile]="userProfile"
+        ></app-navbar>
+    </header>
+    <main class="mb-auto">
+        <router-outlet></router-outlet>
+    </main>
+    <footer>
+<!--        <app-footer-->
+<!--                class="col-span-12"-->
+<!--        ></app-footer>-->
+    </footer>
+</div>

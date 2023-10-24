@@ -1,0 +1,29 @@
+<a [attr.href]="link ? link : null" [attr.target]="link ? '_blank' : null">
+  <button
+          class="{{
+        isWhite ? 'bg-primary-white text-secondary-black'
+      : isDangerous ? 'bg-primary-magenta text-secondary-white'
+      : isSecondary ? 'bg-secondary-blue text-primary-white'
+      : 'text-primary-white'
+  }}
+  {{
+    isDisabled
+      ? 'opacity-50 cursor-not-allowed'
+      : (isWhite ? 'hover:bg-opacity-10'
+      : isDangerous ? 'hover:bg-opacity-10'
+      : isSecondary ? 'hover:bg-opacity-70'
+      : 'hover:bg-opacity-10 hover:bg-white')
+  }}
+  {{ isFull ? 'w-full justify-center' : '' }}
+   flex px-4 py-2 rounded-3xl {{uppercase ? 'uppercase' : ''}} transform duration-300 gap-4 font-lexend
+   border border-b-white rounded-md  {{class}}
+    "
+          [disabled]="isDisabled"
+          [type]="type"
+          (click)="onClick()"
+  >
+    <fa-icon *ngIf="leftIcon" [icon]="leftIcon" [ngClass]="iconClass"></fa-icon>
+    <span *ngIf="!noLabel">{{ label }}</span>
+    <fa-icon *ngIf="rightIcon" [icon]="rightIcon" [ngClass]="iconClass"></fa-icon>
+  </button>
+</a>

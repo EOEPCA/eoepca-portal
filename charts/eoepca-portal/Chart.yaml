@@ -1,0 +1,5 @@
+apiVersion: v2
+name: eoepca-portal
+description: A helm chart for EOEPCA Portal
+version: 1.0.0
+appVersion: "develop"

@@ -1,0 +1,51 @@
+
+<div class="container items-center mt-10 sm mx-auto grid grid-cols-4 gap-4">
+    <app-button
+            label="Identity Keycloak"
+            [leftIcon]="faLink"
+            [link]="getIdentityService()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="Identity API"
+            [leftIcon]="faLink"
+            [link]="getIdentityApi()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="Ades"
+            [leftIcon]="faLink"
+            [link]="getAdes()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="System Resource Catalogue"
+            [leftIcon]="faLink"
+            [link]="getSystemResourceCatalogue()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="System Data Access"
+            [leftIcon]="faLink"
+            [link]="getSystemDataAccess()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="Workspace"
+            [leftIcon]="faLink"
+            [link]="getWorkspace()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="Container Registry"
+            [leftIcon]="faLink"
+            [link]="getContainerRegistry()"
+            class="w-full h-full items-center"
+    ></app-button>
+    <app-button
+            label="Dummy service"
+            [leftIcon]="faLink"
+            [link]="getDummyService()"
+            class="w-full h-full items-center"
+    ></app-button>
+</div>
