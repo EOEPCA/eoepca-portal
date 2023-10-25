@@ -11,7 +11,7 @@ export const environment = {
   },
   api: 'https://identity.api.eoepca.org',
   links: {
-    identityService: "https://identity.keycloak.eoepca.org",
+    keycloak: "https://identity.keycloak.eoepca.org",
     identityApi: "https://identity.api.eoepca.org",
     ades: "https://ades.eoepca.org/admin/wps3/processes",
     systemResourceCatalogue: "https://resource-catalogue.eoepca.org",
