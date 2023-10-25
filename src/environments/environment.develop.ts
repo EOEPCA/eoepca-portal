@@ -5,7 +5,7 @@ export const environment = {
   demo: false,
   identity: {
     url: 'https://identity.keycloak.develop.eoepca.org',
-    realm: 'demo',
+    realm: 'master',
     clientId: 'eoepca-portal'
   },
   api: 'https://identity.api.develop.eoepca.org',
