@@ -6,12 +6,12 @@ export const environment = {
   demo: false,
   identity: {
     url: 'https://identity.keycloak.eoepca.org',
-    realm: 'master',
+    realm: 'demo',
     clientId: 'eoepca-portal'
   },
   api: 'https://identity.api.eoepca.org',
   links: {
-    identityService: "https://identity.keycloak.eoepca.org",
+    keycloak: "https://identity.keycloak.eoepca.org",
     identityApi: "https://identity.api.eoepca.org",
     ades: "https://ades.eoepca.org/admin/wps3/processes",
     systemResourceCatalogue: "https://resource-catalogue.eoepca.org",

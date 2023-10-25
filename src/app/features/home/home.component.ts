@@ -11,34 +11,34 @@ export class HomeComponent {
 
   protected readonly faLink = faLink;
 
-  getIdentityService(){
-    return environment.links.identityService;
+  getKeycloakLink(){
+    return environment.links.keycloak;
   }
 
-  getIdentityApi(){
+  getIdentityApiLink(){
     return environment.links.identityApi;
   }
 
-  getAdes(){
+  getAdesLink(){
     return environment.links.ades;
   }
 
-  getSystemResourceCatalogue(){
+  getSystemResourceCatalogueLink(){
     return environment.links.systemResourceCatalogue;
   }
 
-  getSystemDataAccess(){
+  getSystemDataAccessLink(){
     return environment.links.systemDataAccess;
   }
-  getWorkspace(){
+  getWorkspaceLink(){
     return environment.links.workspace;
   }
 
-  getContainerRegistry(){
+  getContainerRegistryLink(){
     return environment.links.containerRegistry;
   }
 
-  getDummyService(){
+  getDummyServiceLink(){
     return environment.links.dummyService;
   }
 
