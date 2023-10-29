@@ -11,13 +11,19 @@ export const environment = {
   },
   api: 'https://identity.api.staging.eoepca.org',
   links: {
-    keycloak: "https://identity.keycloak.staging.eoepca.org",
+    keycloak: "https://identity.keycloak.staging.eoepca.org/admin/master/console",
     identityApi: "https://identity.api.staging.eoepca.org",
     ades: "https://ades.staging.eoepca.org/admin/wps3/processes",
     systemResourceCatalogue: "https://resource-catalogue.staging.eoepca.org",
     systemDataAccess: "https://data-access.staging.eoepca.org",
-    workspace: "https://workspace-api.staging.eoepca.org/docs#",
+    workspace: "https://workspace-api.staging.eoepca.org",
     containerRegistry: "https://harbor.staging.eoepca.org",
     dummyService: "https://identity.dummy-service.staging.eoepca.org",
+  },
+  cookies: {
+    token: {
+      name: 'auth_user_id',
+      domain: '.staging.eoepca.org'
+    }
   }
 };

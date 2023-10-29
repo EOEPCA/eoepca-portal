@@ -1,5 +1,5 @@
-<div class="bg-primary-black flex flex-col h-screen justify-between">
-    <header>
+<div class="bg-primary-black flex flex-col h-screen justify-between overflow-x-hidden">
+    <header class="bg-primary-black">
         <app-navbar
                 (login)="onLogin()"
                 (logout)="onLogout()"
@@ -7,12 +7,12 @@
                 [userProfile]="userProfile"
         ></app-navbar>
     </header>
-    <main class="mb-auto">
+    <main class="mb-auto bg-primary-black">
         <router-outlet></router-outlet>
     </main>
-    <footer>
-<!--        <app-footer-->
-<!--                class="col-span-12"-->
-<!--        ></app-footer>-->
+    <footer class="bg-primary-black">
+        <!--        <app-footer-->
+        <!--                class="col-span-12"-->
+        <!--        ></app-footer>-->
     </footer>
 </div>

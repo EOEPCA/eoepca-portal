@@ -1,17 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  ButtonComponent,
-  IconButtonComponent,
-  NavbarComponent,
-  FooterComponent
-} from './components';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { NgSelectModule } from '@ng-select/ng-select';
-import { ClickOutsideDirective } from './directives';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ButtonComponent, FooterComponent, IconButtonComponent, NavbarComponent} from './components';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {AngularSvgIconModule} from 'angular-svg-icon';
+import {NgSelectModule} from '@ng-select/ng-select';
+import {ClickOutsideDirective, AutofocusDirective} from './directives';
+import {AlertComponent} from './components/alert/alert.component';
+import { ElasticDirective } from './directives/elastic.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +16,10 @@ import { ClickOutsideDirective } from './directives';
     IconButtonComponent,
     NavbarComponent,
     FooterComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    AlertComponent,
+    AutofocusDirective,
+    ElasticDirective
   ],
   imports: [
     CommonModule,
@@ -38,6 +38,10 @@ import { ClickOutsideDirective } from './directives';
     IconButtonComponent,
     IconButtonComponent,
     ButtonComponent,
+    AlertComponent,
+    AutofocusDirective,
+    ElasticDirective
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

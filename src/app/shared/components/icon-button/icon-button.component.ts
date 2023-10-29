@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-icon-button',
@@ -16,9 +16,11 @@ export class IconButtonComponent implements OnInit {
   @Output() btnClick = new EventEmitter();
   class = '';
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   onClick() {
     this.btnClick.emit();

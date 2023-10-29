@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-button',
@@ -25,9 +25,12 @@ export class ButtonComponent implements OnInit {
   @Input() link = "";
   @Input() uppercase = false;
   @Output() buttonClick = new EventEmitter();
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 
   onClick() {
     this.buttonClick.emit();

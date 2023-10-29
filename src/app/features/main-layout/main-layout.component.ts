@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { KeycloakService } from 'keycloak-angular';
+import {Component, OnInit} from '@angular/core';
+import {KeycloakService} from 'keycloak-angular';
 
 @Component({
   selector: 'app-main-layout',
@@ -14,7 +14,8 @@ export class MainLayoutComponent implements OnInit {
 
   constructor(
     private keycloakService: KeycloakService,
-    ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.keycloakService.isLoggedIn().then(value => {

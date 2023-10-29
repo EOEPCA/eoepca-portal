@@ -1,31 +1,31 @@
 <footer class="px-6 bg-primary-black text-primary-white pb-6 h-max">
-  <div class="grid grid-cols-12 my-12">
-    <div class="col-span-2">
-      <div class="flex flex-row justify-center w-full h-14">
-        <img src="assets/img/logo.png">
-      </div>
-    </div>
-    <div class="col-span-8">
-      <div class="flex flex-row w-full justify-center">
-        <svg-icon
-          src="assets/img/ec_02.svg"
-          svgClass="w-[50rem]"
-        ></svg-icon>
-      </div>
-    </div>
-    <div class="col-span-2">
-      <div class="flex flex-col gap-12 justify-between">
-        <div class="flex flex-col gap-1 uppercase font-lexend text-xl">
-          <div *ngFor="let item of menuItems">
-            <a [href]="item.url" target="_blank">{{ item.label }}</a>
-          </div>  
+    <div class="grid grid-cols-12 my-12">
+        <div class="col-span-2">
+            <div class="flex flex-row justify-center w-full h-14">
+                <img src="assets/img/logo.png">
+            </div>
         </div>
-        <div class="flex flex-col gap-1 uppercase font-lexend text-xl">
-          <div *ngFor="let item of secondaryMenuItems">
-            <a [href]="item.url" target="_blank">{{ item.label }}</a>
-          </div>
+        <div class="col-span-8">
+            <div class="flex flex-row w-full justify-center">
+                <svg-icon
+                        src="assets/img/ec_02.svg"
+                        svgClass="w-[50rem]"
+                ></svg-icon>
+            </div>
         </div>
-      </div>
+        <div class="col-span-2">
+            <div class="flex flex-col gap-12 justify-between">
+                <div class="flex flex-col gap-1 uppercase font-lexend text-xl">
+                    <div *ngFor="let item of menuItems">
+                        <a [href]="item.url" target="_blank">{{ item.label }}</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1 uppercase font-lexend text-xl">
+                    <div *ngFor="let item of secondaryMenuItems">
+                        <a [href]="item.url" target="_blank">{{ item.label }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
