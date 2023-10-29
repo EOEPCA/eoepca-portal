@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { environment } from '../../../../../environments/environment';
-import { MenuItem } from '@core';
+import {Component, Input, OnInit} from '@angular/core';
+import {environment} from '../../../../../environments/environment';
+import {MenuItem} from '@core';
 
 @Component({
   selector: 'app-footer',
@@ -8,13 +8,14 @@ import { MenuItem } from '@core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  
+
   @Input() menuItems: MenuItem[] = []
   @Input() secondaryMenuItems: MenuItem[] = [];
 
   env = environment;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit(): void {
 

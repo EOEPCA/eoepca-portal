@@ -1,15 +1,9 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { animate, style, transition, trigger } from '@angular/animations';
-import {
-  faSignInAlt,
-  faSignOutAlt,
-  faTimes,
-  faUser,
-  faQuestionCircle
-} from '@fortawesome/free-solid-svg-icons';
-import { environment } from '../../../../../environments/environment';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {animate, style, transition, trigger} from '@angular/animations';
+import {faQuestionCircle, faSignInAlt, faSignOutAlt, faTimes, faUser} from '@fortawesome/free-solid-svg-icons';
+import {environment} from '../../../../../environments/environment';
 import * as pkg from '../../../../../../package.json';
-import { Subject } from 'rxjs';
+import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -18,11 +12,11 @@ import { Subject } from 'rxjs';
   animations: [
     trigger('slideInOut', [
       transition(':enter', [
-        style({ transform: 'translateX(100%)' }),
-        animate('200ms ease-in', style({ transform: 'translateX(0%)' })),
+        style({transform: 'translateX(100%)'}),
+        animate('200ms ease-in', style({transform: 'translateX(0%)'})),
       ]),
       transition(':leave', [
-        animate('200ms ease-in', style({ transform: 'translateX(100%)'})),
+        animate('200ms ease-in', style({transform: 'translateX(100%)'})),
       ]),
     ])
   ]
@@ -34,7 +28,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   @Output() login = new EventEmitter();
   @Output() logout = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   faUser = faUser;
   signOutIcon = faSignOutAlt;

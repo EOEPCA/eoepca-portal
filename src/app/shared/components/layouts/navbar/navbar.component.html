@@ -1,5 +1,5 @@
 <nav
-  class="
+        class="
     flex
     justify-between
     font-lato
@@ -10,29 +10,29 @@
     text-primary-white
   "
 >
-  <a href="/">
-    <div class="flex">
-    <img src="assets/img/logo.png" class="h-15 w-20">
-      <span class="font-mono text-lg self-center text-primary-white ml-2">EOEPCA Portal</span>
+    <a href="/">
+        <div class="flex">
+            <img src="assets/img/logo.png" class="h-15 w-20">
+            <span class="font-mono text-lg self-center text-primary-white ml-2">EOEPCA Portal</span>
+        </div>
+    </a>
+    <div class="flex gap-4 justify-end font-lexend self-center">
+        <div *ngIf="getUserData() as user; else signInButton" class="contents">
+            <h1 class="text-primary-white self-center mr-2">
+                {{ user.preferred_username }}
+            </h1>
+            <app-button
+                    (click)="onLogout()"
+                    [leftIcon]="signOutIcon"
+                    [label]="'Sign out'"
+            ></app-button>
+        </div>
+        <ng-template #signInButton>
+            <app-button [isSecondary]="true"
+                        (click)="onLogin()"
+                        [label]="'Sign in'"
+                        [leftIcon]="signIn"
+            ></app-button>
+        </ng-template>
     </div>
-  </a>
-  <div class="flex gap-4 justify-end font-lexend self-center">
-      <div *ngIf="getUserData() as user; else signInButton" class="contents">
-          <h1 class="text-primary-white self-center mr-2">
-              {{ user.preferred_username }}
-          </h1>
-          <app-button
-                  (click)="onLogout()"
-                  [leftIcon]="signOutIcon"
-                  [label]="'Sign out'"
-          ></app-button>
-      </div>
-      <ng-template #signInButton>
-        <app-button [isSecondary]="true"
-          (click)="onLogin()"
-          [label]="'Sign in'"
-          [leftIcon]="signIn"
-        ></app-button>
-      </ng-template>
-  </div>
 </nav>

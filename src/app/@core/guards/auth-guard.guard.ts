@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  Router,
-  RouterStateSnapshot
-} from '@angular/router';
-import { KeycloakAuthGuard, KeycloakService } from 'keycloak-angular';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
+import {KeycloakAuthGuard, KeycloakService} from 'keycloak-angular';
 
 @Injectable({
   providedIn: 'root'
@@ -37,15 +33,6 @@ export class AuthGuard extends KeycloakAuthGuard {
     }
 
     // Allow the user to proceed if all the required roles are present.
-    // const isUserAllowed =  requiredRoles.every((role) => this.roles.includes(role));
-
-    // NOTE: for now we only check for authentication and not for roles. This will be changed in a future version.
-    const isUserAllowed = true;
-    if (isUserAllowed) {
-        return true;
-    } else {
-        this.route.navigateByUrl('/' + route.data['redirectTo']);
-        return false;
-    }
+    return requiredRoles.every((role) => this.roles.includes(role));
   }
 }

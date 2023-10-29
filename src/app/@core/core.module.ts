@@ -1,5 +1,5 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule, Optional, SkipSelf} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [],
@@ -13,4 +13,4 @@ export class CoreModule {
       throw new Error('You should import core module only in the root module');
     }
   }
- }
+}
