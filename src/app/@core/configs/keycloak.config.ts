@@ -7,11 +7,11 @@ export function initializeKeycloak(keycloak: KeycloakService) {
       keycloak.isLoggedIn().then(loggedIn => {
         if (!loggedIn) {
           const expirationDate: Date = new Date(0);
-          document.cookie = `${environment.cookies.token.name}=; expires=${expirationDate.toUTCString()}; path=/`;
+          document.cookie = `${environment.cookies.token.name}=; expires=${expirationDate.toUTCString()}; path=/; domain=${environment.cookies.token.domain}; SameSite=Stric`;
         } else {
           const token: string = keycloak.getKeycloakInstance().token;
           if (token && token !== '') {
-            document.cookie = `${environment.cookies.token.name}=${token}; path=/; domain=${environment.cookies.token.domain}; expires=Session; SameSite=Strict`;
+            document.cookie = `${environment.cookies.token.name}=${token}; expires=Session; path=/; domain=${environment.cookies.token.domain}; SameSite=Strict`;
           }
         }
       })

@@ -22,7 +22,7 @@ export const environment = {
   cookies: {
     token: {
       name: 'auth_user_id',
-      domain: '.develop.eoepca.org'
+      domain: 'localhost'
     }
   }
 };
