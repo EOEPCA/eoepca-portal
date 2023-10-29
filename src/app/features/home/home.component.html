@@ -75,6 +75,7 @@
                     </select>
                     <select id="services"
                             [(ngModel)]="selectedService"
+                            (change)="clearRequestUri()"
                             class="appearance-none max-md:mt-3 max-md:w-full bg-primary-black block text-secondary-white border border-gray-200  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-primary-black focus:border-gray-500">
                         <option class="p-4" [ngValue]="null" selected>Choose a service</option>
                         <option [ngValue]="getIdentityApiLink()">Identity API - {{getIdentityApiLink()}}</option>

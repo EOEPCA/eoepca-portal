@@ -175,4 +175,7 @@ export class HomeComponent {
     return statusCode + " " + statusText;
   }
 
+  clearRequestUri() {
+    this.requestUri = null;
+  }
 }
