@@ -1,6 +1,6 @@
 <div class="mx-5">
     <div class="container items-center my-10 sm mx-auto">
-        <span class="block mb-2 text-lg font-medium text-primary-white">Visit a portal</span>
+        <span class="block mb-2 text-lg font-medium text-primary-white">Visit a service</span>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
             <app-button
                     label="Keycloak Administration"
@@ -8,20 +8,19 @@
                     [link]="getKeycloakLink()"
                     class="w-full h-full items-center"
             ></app-button>
-            <!--       <app-button
-                           label="Identity API"
-                           [leftIcon]="faLink"
-                           [link]="getIdentityApiLink()"
-                           class="w-full h-full items-center"
-                   ></app-button>
-                   -->
-            <!--      <app-button
-                         label="Ades"
-                         [leftIcon]="faLink"
-                         [link]="getAdesLink()"
-                         class="w-full h-full items-center"
-                 ></app-button>
-                   -->
+            <app-button
+                    label="Identity API"
+                    [leftIcon]="faLink"
+                    [link]="getIdentityApiLink()"
+                    class="w-full h-full items-center"
+            ></app-button>
+            -->
+            <app-button
+                    label="Ades"
+                    [leftIcon]="faLink"
+                    [link]="getAdesLink()"
+                    class="w-full h-full items-center"
+            ></app-button>
             <app-button
                     label="System Resource Catalogue"
                     [leftIcon]="faLink"
@@ -47,13 +46,12 @@
                     [link]="getContainerRegistryLink()"
                     class="w-full h-full items-center"
             ></app-button>
-            <!-- <app-button
+            <app-button
                     label="Dummy service"
                     [leftIcon]="faLink"
                     [link]="getDummyServiceLink()"
                     class="w-full h-full items-center"
             ></app-button>
-    -->
         </div>
         <div class="mt-10">
             <hr/>
