@@ -20,8 +20,12 @@ export const environment = {
     dummyService: "https://identity.dummy-service.demo.eoepca.org",
   },
   cookies: {
-    token: {
+    accessToken: {
       name: 'auth_user_id',
+      domain: '.demo.eoepca.org'
+    },
+    refreshToken: {
+      name: 'auth_refresh_token',
       domain: '.demo.eoepca.org'
     }
   }
