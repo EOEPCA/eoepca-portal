@@ -1,5 +1,5 @@
 ### STAGE 1: Build ###
-FROM node:18.12.1-buster-slim as build
+FROM node:21-alpine3.18 as build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm i -g @angular/cli
