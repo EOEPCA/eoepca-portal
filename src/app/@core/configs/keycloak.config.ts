@@ -29,10 +29,11 @@ export function initializeKeycloak(keycloak: KeycloakService) {
       config: {
         url: environment.identity.url,
         realm: environment.identity.realm,
-        clientId: environment.identity.clientId
+        clientId: environment.identity.clientId,
       },
       initOptions: {
-        onLoad: 'check-sso'
+        onLoad: 'check-sso',
+        scope: 'openid offline_access'
       }
     }).catch(onReject => console.error(onReject));
 }
