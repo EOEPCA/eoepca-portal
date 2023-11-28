@@ -33,7 +33,7 @@ export function initializeKeycloak(keycloak: KeycloakService) {
       },
       initOptions: {
         onLoad: 'check-sso',
-        scope: 'openid offline_access'
+        scope: 'openid'
       }
     }).catch(onReject => console.error(onReject));
 }
