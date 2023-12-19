@@ -119,7 +119,7 @@
               "browserTarget": "eoepca-portal:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "develop"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
