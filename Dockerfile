@@ -8,7 +8,7 @@ RUN npm i -g @angular/cli
 RUN npm i
     
 COPY . .
-ARG CONFIGURATION=develop
+ARG CONFIGURATION=demo
 RUN ng build --configuration=$CONFIGURATION
 
 ### STAGE 2: Run ###
