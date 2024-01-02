@@ -235,14 +235,14 @@ Project Link: [https://github.com/EOEPCA/eoepca-portal](https://github.com/EOEPC
 - README.md is based on [this template](https://github.com/othneildrew/Best-README-Template) by [Othneil Drew](https://github.com/othneildrew).
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/EOEPCA/eoepca-portalsvg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/EOEPCA/eoepca-portal.svg?style=flat-square
 [contributors-url]: https://github.com/EOEPCA/eoepca-portal/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/EOEPCA/eoepca-portalsvg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/EOEPCA/eoepca-portal.svg?style=flat-square
 [forks-url]: https://github.com/EOEPCA/eoepca-portal/network/members
-[stars-shield]: https://img.shields.io/github/stars/EOEPCA/eoepca-portalsvg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/EOEPCA/eoepca-portal.svg?style=flat-square
 [stars-url]: https://github.com/EOEPCA/eoepca-portal/stargazers
-[issues-shield]: https://img.shields.io/github/issues/EOEPCA/eoepca-portalsvg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/EOEPCA/eoepca-portal.svg?style=flat-square
 [issues-url]: https://github.com/EOEPCA/eoepca-portal/issues
-[license-shield]: https://img.shields.io/github/license/EOEPCA/eoepca-portalsvg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/EOEPCA/eoepca-portal.svg?style=flat-square
 [license-url]: https://github.com/EOEPCA/eoepca-portal/blob/master/LICENSE
-[build-shield]: https://www.travis-ci.com/EOEPCA/eoepca-portalsvg?branch=master
+[build-shield]: https://www.travis-ci.com/EOEPCA/eoepca-portal.svg?branch=master
