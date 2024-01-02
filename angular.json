@@ -77,6 +77,27 @@
                 }
               ]
             },
+            "demo": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.demo.ts"
+                }
+              ]
+            },
             "develop": {
               "budgets": [
                 {
@@ -115,11 +136,17 @@
             "production": {
               "browserTarget": "eoepca-portal:build:production"
             },
-            "development": {
-              "browserTarget": "eoepca-portal:build:development"
+            "demo": {
+              "browserTarget": "eoepca-portal:build:demo"
+            },
+            "staging": {
+              "browserTarget": "eoepca-portal:build:staging"
+            },
+            "develop": {
+              "browserTarget": "eoepca-portal:build:develop"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "develop"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
