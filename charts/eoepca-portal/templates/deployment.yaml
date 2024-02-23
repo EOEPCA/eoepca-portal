@@ -43,6 +43,8 @@ spec:
             {{- with .Values.deployment.extraEnvFrom }}
             {{- tpl . $ | nindent 12 }}
             {{- end }}
+            - configMapRef:
+                name: {{ include "eoepca-portal.name" . }}
           ports:
             - name: http
               containerPort: {{ .Values.deployment.containerPort }}
