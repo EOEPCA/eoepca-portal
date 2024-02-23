@@ -8,10 +8,12 @@ RUN npm i -g @angular/cli
 RUN npm i
     
 COPY . .
-ARG CONFIGURATION=develop
-RUN ng build --configuration=$CONFIGURATION
+RUN ng build
 
 ### STAGE 2: Run ###
 FROM nginx:stable-alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/* /usr/share/nginx/html
+WORKDIR /start
+COPY ./start.sh .
+CMD [ "sh", "start.sh" ]

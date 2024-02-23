@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {faLink} from "@fortawesome/free-solid-svg-icons";
-import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {IconDefinition} from "@fortawesome/fontawesome-svg-core";
-import {FormControl, FormGroup} from "@angular/forms";
-import {parseJson} from "@angular/cli/src/utilities/json-file";
+import {Environment} from "../../environment.interface";
+
+declare let config: Environment;
 
 @Component({
   selector: 'app-home',
@@ -28,40 +28,40 @@ export class HomeComponent {
   protected errorMessage: string = null;
   protected loading: boolean = false;
 
-  getKeycloakLink() {
-    return environment.links.keycloak;
+  getKeycloakUrl() {
+    return `${config.identity.url}/admin/${config.identity.realm}/console`;
   }
 
-  getIdentityApiLink() {
-    return environment.links.identityApi;
+  getIdentityApiUrl() {
+    return config.urls.identityApi;
   }
 
-  getAdesLink() {
-    return environment.links.ades;
+  getAdesUrl() {
+    return config.urls.ades;
   }
 
-  getSystemResourceCatalogueLink() {
-    return environment.links.systemResourceCatalogue;
+  getResourceCatalogueUrl() {
+    return config.urls.resourceCatalogue;
   }
 
-  getSystemDataAccessLink() {
-    return environment.links.systemDataAccess;
+  getDataAccessUrl() {
+    return config.urls.dataAccess;
   }
 
-  getWorkspaceLink() {
-    return environment.links.workspace;
+  getWorkspaceUrl() {
+    return config.urls.workspace;
   }
 
-  getWorkspaceDocsLink() {
-    return environment.links.workspace + "/docs#";
+  getWorkspaceDocsUrl() {
+    return config.urls.workspaceDocs;
   }
 
-  getContainerRegistryLink() {
-    return environment.links.containerRegistry;
+  getImagesRegistryUrl() {
+    return config.urls.imagesRegistry;
   }
 
-  getDummyServiceLink() {
-    return environment.links.dummyService;
+  getDummyServiceUrl() {
+    return config.urls.dummyService;
   }
 
   callService() {

@@ -5,50 +5,50 @@
             <app-button
                     label="Keycloak Administration"
                     [leftIcon]="faLink"
-                    [link]="getKeycloakLink()"
+                    [link]="getKeycloakUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="Identity API"
                     [leftIcon]="faLink"
-                    [link]="getIdentityApiLink()"
+                    [link]="getIdentityApiUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="Ades"
                     [leftIcon]="faLink"
-                    [link]="getAdesLink()"
+                    [link]="getAdesUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="System Resource Catalogue"
                     [leftIcon]="faLink"
-                    [link]="getSystemResourceCatalogueLink()"
+                    [link]="getResourceCatalogueUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="System Data Access"
                     [leftIcon]="faLink"
-                    [link]="getSystemDataAccessLink()"
+                    [link]="getDataAccessUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="Workspace Docs"
                     [leftIcon]="faLink"
-                    [link]="getWorkspaceDocsLink()"
+                    [link]="getWorkspaceDocsUrl()"
                     class="w-full h-full items-center"
             ></app-button>
 
             <app-button
                     label="Container Registry"
                     [leftIcon]="faLink"
-                    [link]="getContainerRegistryLink()"
+                    [link]="getImagesRegistryUrl()"
                     class="w-full h-full items-center"
             ></app-button>
             <app-button
                     label="Dummy service"
                     [leftIcon]="faLink"
-                    [link]="getDummyServiceLink()"
+                    [link]="getDummyServiceUrl()"
                     class="w-full h-full items-center"
             ></app-button>
         </div>
@@ -75,10 +75,10 @@
                             (change)="clearRequestUri()"
                             class="appearance-none max-md:mt-3 max-md:w-full bg-primary-black block text-secondary-white border border-gray-200  py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-primary-black focus:border-gray-500">
                         <option class="p-4" [ngValue]="null" selected>Choose a service</option>
-                        <option [ngValue]="getIdentityApiLink()">Identity API - {{getIdentityApiLink()}}</option>
-                        <option [ngValue]="getAdesLink()">Ades - {{getAdesLink()}}</option>
-                        <option [ngValue]="getWorkspaceLink()">Workspace - {{getWorkspaceLink()}}</option>
-                        <option [ngValue]="getDummyServiceLink()">Dummy service - {{getDummyServiceLink()}}</option>
+                        <option [ngValue]="getIdentityApiUrl()">Identity API - {{getIdentityApiUrl()}}</option>
+                        <option [ngValue]="getAdesUrl()">Ades - {{getAdesUrl()}}</option>
+                        <option [ngValue]="getWorkspaceUrl()">Workspace - {{getWorkspaceUrl()}}</option>
+                        <option [ngValue]="getDummyServiceUrl()">Dummy service - {{getDummyServiceUrl()}}</option>
                     </select>
                     <span class="text-secondary-white text-2xl font-bold mx-5 max-md:pt-3">/</span>
                     <input [(ngModel)]="requestUri"
