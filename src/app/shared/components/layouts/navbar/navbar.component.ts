@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {faQuestionCircle, faSignInAlt, faSignOutAlt, faTimes, faUser} from '@fortawesome/free-solid-svg-icons';
-import {environment} from '../../../../../environments/environment';
 import * as pkg from '../../../../../../package.json';
 import {Subject} from 'rxjs';
 
@@ -36,7 +35,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   close = faTimes;
   signIn = faSignInAlt;
   questionIcon = faQuestionCircle;
-  env = environment;
   pkg = pkg;
 
   componentDestroyed$ = new Subject<boolean>();

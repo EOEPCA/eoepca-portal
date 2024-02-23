@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {environment} from '../../../../../environments/environment';
 import {MenuItem} from '@core';
 
 @Component({
@@ -11,8 +10,6 @@ export class FooterComponent implements OnInit {
 
   @Input() menuItems: MenuItem[] = []
   @Input() secondaryMenuItems: MenuItem[] = [];
-
-  env = environment;
 
   constructor() {
   }
