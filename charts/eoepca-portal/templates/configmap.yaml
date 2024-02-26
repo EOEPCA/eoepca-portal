@@ -6,7 +6,6 @@ metadata:
     {{- include "eoepca-portal.labels" . | nindent 4 }}
 data:
   AUTH_SERVER_URL: "{{ .Values.configMap.auth_server_url }}"
-  IDENTITY_URL: "{{ .Values.configMap.identity_url }}"
   REALM: "{{ .Values.configMap.realm }}"
   CLIENT_ID: "{{ .Values.configMap.client_id }}"
   IDENTITY_API_URL: "{{ .Values.configMap.identity_api_url }}"
